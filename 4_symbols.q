@@ -1,0 +1,2 @@
+`usdsgd=`usdjpy / sybmols equality
+
