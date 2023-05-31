@@ -92,3 +92,30 @@ rap_any_2_2: rap_any[2; 2]
 b: rap_any_2_2/[1.0]
 b*b
 rap_any_2_3:rap_any[3;2]
+
+buys: 2 1 4 3 5 4f
+buys
+sells: 12f
+sells
+
+deltas sells&sums buys
+
+buys: 2 1 4 3 5 4f
+sells: 2 4 3 2f
+
+sums buys
+sums sells
+
+deltas each deltas sums[sells] &\: sums[buys]
+
+/ break it down, each left command, applies right list to each item in the left
+sells &\: buys
+
+/ applying deltas to list of list
+
+deltas sums[sells] &\: sums[buys]
+deltas ((1;2;3) ; (1;2;3))
+
+/ applying to each list in the list
+deltas each deltas sums[sells] &\: sums[buys]
+
